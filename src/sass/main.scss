@@ -1,0 +1,163 @@
+.container{
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+}
+@mixin for__tablet{ 
+        @media (max-width:800px){
+            @content;
+        }
+}
+header{
+    background-color: burlywood;
+    padding: 30px 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    h2{
+        font-size: 40px;
+    }
+}
+.right__nav{
+        display: flex;
+        position: relative;
+}
+.for__desctop{
+    display: flex;
+    column-gap: 20px;
+    @include for__tablet{
+        display: none;
+    }
+}
+.add__btn{
+    display: none;
+    @include for__tablet{
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: none;
+       border: none;
+    }
+    img{
+        width: 100%; 
+        border-radius: 50%;    
+    }
+}
+.list{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+.for__phone{
+    display: none;
+    @include for__tablet{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: burlywood;
+        padding: 20px;
+        transform: translateY(-200%);
+        transition: 2s;
+        z-index: 2;
+    }
+}
+.show{
+    transform: translateY(0) !important;
+}
+h1{
+    margin-top: 40px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.red{
+    color: red; 
+}
+.modal{
+    border: 3px solid burlywood;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 150px;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    
+    p{
+        font-size: 20px;
+    }
+    div{
+        display: flex;
+        column-gap: 50px;
+        padding-top: 20px;
+
+    }
+}
+.add{
+    padding: 8px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+.remove{
+    padding: 8px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+}
+.having{
+    display: flex;
+}
+.bigBtn{
+    padding: 8px;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dark-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.355);
+    z-index: 90;
+  }
+  #car{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 350px;
+  }
+  .carRandom{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    background-color: coral;
+    color: azure;
+    font-size: 24px;
+    border: none;
+  }
+  .changeLang{
+    padding: 3px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    background-color: darkgreen;
+    color: antiquewhite;
+  }
+
